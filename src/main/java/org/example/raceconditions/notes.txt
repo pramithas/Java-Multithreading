@@ -1,0 +1,14 @@
+Race conditions is a situation where
+
+    - Two or more threads access the same variable(s) (or data) in a way where the final result stored
+      in a variable depends on how threads access to the variables is scheduled.
+
+Race Conditions occur when
+
+    - Two or more threads read and write the same variable(s) or data concurrently.
+
+    - The threads access the variable(s) using either of these patterns:
+        - Check then act.
+        - Read modify write.
+            - where the modified value depends on the previously read value.
+    - The thread access to the variable(s) or data is not atomic.

@@ -1,0 +1,17 @@
+How many threads are needed are determined by these factors:
+
+1. How many CPUs the computer has.
+2. What type of work the thread perform.
+3. Desired fairness between threads.
+
+
+
+2. If a task is CPU intensive, there is no much advantage running two threads in a CPU. But, if the task
+is something affecting UI, then it makes to run those using two threads so that a single user does not
+have to wait too long (thread fairness).
+
+But, generally, we have one threads per CPU for CPU intensive tasks.
+
+But, if the CPU performs mostly IO operations, it means that it has to waiting operation quite a bit.
+So, in that time another threads can perform some other tasks. Basically, two threads can perform CPU
+and IO intensive tasks alternatively.
